@@ -4,3 +4,4 @@ Proyecto de misión TIC, es una APP Movil para visualizar información de sitios
 
 - Juan Diego Vargas Posada
 - Ramón Enrique Barrera Arocha
+- Johana Mafla Franco
