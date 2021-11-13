@@ -58,7 +58,7 @@
     <ImageView
         android:id="@+id/iv_dubai_1"
         android:layout_width="match_parent"
-        android:layout_height="270dp"
+        android:layout_height="200dp"
         android:scaleType="centerCrop"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -69,8 +69,8 @@
         android:id="@+id/tv_Subtitulo"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="Dubái Creek es el corazón de la ciudad."
+        android:layout_margin="12dp"
+        android:text="Dubái Creek es el corazón de la ciudad"
         android:textColor="@color/teal_200"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,15 +80,9 @@
         android:id="@+id/tv_detalle"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="12dp"
         android:justificationMode="inter_word"
-        android:text="Dubái Creek es el corazón de la ciudad.
-Se caracteriza por la ría natural que divide la ciudad entre
-Deira y Bur Dubái (cerca del Zoco de las Especias y del Barrio Antiguo de Dubái).
-Por su ubicación es posible decir que estás en el corazón de la ciudad.
-podrás ver las grandes edificaciones de la metrópoli mientras vas en un “Abra”,
-que son pequeños taxis de madera que viajan por agua; llevándote de una orilla a
-otra por un bajo costo. "
+        android:text="@string/descripcion_1"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_Subtitulo" />
@@ -97,8 +91,8 @@ otra por un bajo costo. "
         android:id="@+id/tv_Subtitulo2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:text="¿Cómo llegar a Dubái Creek, Zona Antígua?"
+        android:layout_margin="12dp"
+        android:text="Ubicación"
         android:textColor="@color/teal_200"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -108,14 +102,58 @@ otra por un bajo costo. "
         android:id="@+id/tv_detalle2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
+        android:layout_margin="12dp"
         android:justificationMode="inter_word"
-        android:text="La forma más fácil y económica de llegar es tomando el metro.
-Utiliza la línea verde y bájate en la estación Creek, que al encontrarse
-muy cerca de la orilla, el viaje es un cruce por debajo del agua."
+        android:text="@string/ubicacion_1"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/tv_Subtitulo2" />
+
+    <TextView
+        android:id="@+id/tv_Subtitulo3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:layout_marginStart="72dp"
+        android:layout_marginTop="136dp"
+        android:text="Tiempo"
+        android:textColor="@color/teal_200"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_detalle2" />
+
+    <TextView
+        android:id="@+id/tv_detalle3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:justificationMode="inter_word"
+        android:text="@string/tiempo_1"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Subtitulo3" />
+
+    <TextView
+        android:id="@+id/tv_Subtitulo4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:text="Sitios de interés"
+        android:textColor="@color/teal_200"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_detalle3" />
+
+    <TextView
+        android:id="@+id/tv_detalle4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:justificationMode="inter_word"
+        android:text="@string/sitios_1"
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Subtitulo4" />
 
     <TextView
         android:layout_width="match_parent"
