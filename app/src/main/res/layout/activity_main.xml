@@ -8,38 +8,114 @@
     tools:context=".MainActivity">
 
     <ImageView
-        android:id="@+id/iv_mapa"
-        android:layout_width="match_parent"
-        android:layout_height="340dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/mapa_dubai_noche2" />
-
-    <ImageView
         android:id="@+id/iv_logo"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        app:layout_constraintBottom_toTopOf="@+id/tvDubai"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_margin="10dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_turistic2" />
+        app:srcCompat="@drawable/logo_turistic_horizontal" />
+
+    <ImageButton
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginStart="16dp"
+        android:background="@color/black"
+        android:src="@drawable/icon_back"
+        app:layout_constraintBottom_toTopOf="@id/tvDubai"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/menu"
+        android:layout_width="wrap_content"
+        android:layout_height="60dp"
+        android:layout_marginEnd="16dp"
+        android:background="@color/black"
+        android:src="@drawable/menu_puntos"
+        app:layout_constraintBottom_toTopOf="@id/tvDubai"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/tvDubai"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
         android:background="@color/teal_200"
         android:gravity="center"
-        android:text="Dubái"
+        android:padding="5dp"
+        android:text="Dubái Creek, Zona Antígua"
         android:textColor="@color/black"
-        android:textSize="30sp"
+        android:textSize="24sp"
         android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/iv_mapa"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_logo" />
+
+    <ImageView
+        android:id="@+id/iv_dubai_1"
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDubai"
+        app:srcCompat="@drawable/dubai_1" />
+
+    <TextView
+        android:id="@+id/tv_Subtitulo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="Dubái Creek es el corazón de la ciudad."
+        android:textColor="@color/teal_200"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/iv_dubai_1" />
+
+    <TextView
+        android:id="@+id/tv_detalle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:justificationMode="inter_word"
+        android:text="Dubái Creek es el corazón de la ciudad.
+Se caracteriza por la ría natural que divide la ciudad entre
+Deira y Bur Dubái (cerca del Zoco de las Especias y del Barrio Antiguo de Dubái).
+Por su ubicación es posible decir que estás en el corazón de la ciudad.
+podrás ver las grandes edificaciones de la metrópoli mientras vas en un “Abra”,
+que son pequeños taxis de madera que viajan por agua; llevándote de una orilla a
+otra por un bajo costo. "
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Subtitulo" />
+
+    <TextView
+        android:id="@+id/tv_Subtitulo2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:text="¿Cómo llegar a Dubái Creek, Zona Antígua?"
+        android:textColor="@color/teal_200"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_detalle" />
+
+    <TextView
+        android:id="@+id/tv_detalle2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:justificationMode="inter_word"
+        android:text="La forma más fácil y económica de llegar es tomando el metro.
+Utiliza la línea verde y bájate en la estación Creek, que al encontrarse
+muy cerca de la orilla, el viaje es un cruce por debajo del agua."
+        android:textColor="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tv_Subtitulo2" />
 
     <TextView
         android:layout_width="match_parent"
@@ -52,90 +128,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <TextView
-        android:id="@+id/tv_1"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:gravity="center_vertical"
-        android:text="1. Dubái Creek, Zona Antígua"
-        android:textColor="@color/white"
-        android:layout_margin="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDubai" />
-
-    <ImageView
-        android:id="@+id/iv_dubai_1"
-        android:layout_width="102dp"
-        android:layout_height="58dp"
-        android:scaleType="centerCrop"
-        android:layout_margin="16dp"
-        app:srcCompat="@drawable/dubai_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDubai"/>
-
-    <TextView
-        android:id="@+id/tv_2"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:gravity="center_vertical"
-        android:text="2. ​Dubái Mall"
-        android:textColor="@color/white"
-        android:layout_margin="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_1" />
-
-    <ImageView
-        android:id="@+id/iv_dubai_2"
-        android:layout_width="102dp"
-        android:layout_height="58dp"
-        android:scaleType="centerCrop"
-        android:layout_margin="16dp"
-        app:srcCompat="@drawable/dubai_2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_1"/>
-
-    <TextView
-        android:id="@+id/tv_3"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:gravity="center_vertical"
-        android:text="3. Fuente de Dubái"
-        android:textColor="@color/white"
-        android:layout_margin="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_2" />
-
-    <ImageView
-        android:id="@+id/iv_dubai_3"
-        android:layout_width="102dp"
-        android:layout_height="58dp"
-        android:scaleType="centerCrop"
-        android:layout_margin="16dp"
-        app:srcCompat="@drawable/dubai_3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_2"/>
-
-    <TextView
-        android:id="@+id/tv_4"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:gravity="center_vertical"
-        android:text="4. Safari en el Desierto de Dubái"
-        android:textColor="@color/white"
-        android:layout_margin="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_3" />
-
-    <ImageView
-        android:id="@+id/iv_dubai_4"
-        android:layout_width="102dp"
-        android:layout_height="58dp"
-        android:scaleType="centerCrop"
-        android:layout_margin="16dp"
-        app:srcCompat="@drawable/dubai_4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_3"/>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
