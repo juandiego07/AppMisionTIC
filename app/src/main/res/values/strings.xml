@@ -1,3 +1,16 @@
 <resources>
     <string name="app_name">TouristicSites</string>
+    <string name="to">Salento</string>
+    <string name="descripcion">
+        Salento es un municipio colombiano en el departamento del Quindío.
+        Llamado el Municipio Padre del Quindío por ser el más antiguo de este departamento,
+        La temperatura promedio es de 18 grados Celsius y tiene una población aproximada
+        en el casco urbano de 3000 habitantes y en la zona rural de 5500 habitantes.
+        Se distingue por la arquitectura de su plaza, y de sus casas antiguas en bahareque
+        y en tapias de barro, por la amabilidad y gentileza de sus pobladores, demostraciones
+        artísticas callejeras, por sus hermosos paisajes y por su excelente clima.
+        El municipio de Salento está situado al nororiente del departamento del Quindío,
+        en los 4° 38′ 14″ latitud Norte y los 75° 34′ 15″ longitud oeste.
+        Sitios recomendados: Botanica restaurante, cocina y horno Salento.
+</string>
 </resources>
