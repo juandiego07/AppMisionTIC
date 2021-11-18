@@ -42,6 +42,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <TextView
+        android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="20dp"
         android:background="@color/teal_200"
@@ -53,92 +54,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
-    <TextView
-        android:id="@+id/tv_1"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:gravity="center_vertical"
-        android:text="1. Dubái Creek, Zona Antígua"
-        android:textColor="@color/white"
-        android:layout_margin="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDubai" />
-
-    <ImageView
-        android:id="@+id/iv_dubai_1"
-        android:layout_width="102dp"
-        android:layout_height="58dp"
-        android:scaleType="centerCrop"
-        android:layout_margin="16dp"
-        app:srcCompat="@drawable/dubai_1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvDubai"/>
-
-    <TextView
-        android:id="@+id/tv_2"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:gravity="center_vertical"
-        android:text="2. ​Dubái Mall"
-        android:textColor="@color/white"
-        android:layout_margin="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_1" />
-
-    <ImageView
-        android:id="@+id/iv_dubai_2"
-        android:layout_width="102dp"
-        android:layout_height="58dp"
-        android:scaleType="centerCrop"
-        android:layout_margin="16dp"
-        app:srcCompat="@drawable/dubai_2"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_1"/>
-
-    <TextView
-        android:id="@+id/tv_3"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:gravity="center_vertical"
-        android:text="3. Fuente de Dubái"
-        android:textColor="@color/white"
-        android:layout_margin="16dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_2" />
-
-    <ImageView
-        android:id="@+id/iv_dubai_3"
-        android:layout_width="102dp"
-        android:layout_height="58dp"
-        android:scaleType="centerCrop"
-        android:layout_margin="16dp"
-        app:srcCompat="@drawable/dubai_3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_2"/>
-
-    <TextView
-        android:id="@+id/tv_4"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_margin="16dp"
-        android:layout_marginStart="124dp"
-        android:layout_marginTop="16dp"
-        android:gravity="center_vertical"
-        android:text="4. Safari en el Desierto de Dubái"
-        android:textColor="@color/white"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_3" />
-
-    <ImageView
-        android:id="@+id/iv_dubai_4"
-        android:layout_width="102dp"
-        android:layout_height="58dp"
-        android:scaleType="centerCrop"
-        android:layout_margin="16dp"
-        app:srcCompat="@drawable/dubai_4"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_3"/>
-
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="12dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintTop_toBottomOf="@id/tvDubai"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="1dp" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
