@@ -47,7 +47,7 @@
         android:background="@color/teal_200"
         android:gravity="center"
         android:padding="5dp"
-        android:text="Dubái Creek, Zona Antígua"
+        android:text="@string/titulo1"
         android:textColor="@color/black"
         android:textSize="24sp"
         android:textStyle="bold"
@@ -66,11 +66,11 @@
         app:srcCompat="@drawable/dubai_1" />
 
     <TextView
-        android:id="@+id/tv_Subtitulo"
+        android:id="@+id/tv_Subtitulo1"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
-        android:text="Dubái Creek es el corazón de la ciudad"
+        android:text="@string/subtitulo_descripcion"
         android:textColor="@color/teal_200"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -85,14 +85,14 @@
         android:text="@string/descripcion_1"
         android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tv_Subtitulo" />
+        app:layout_constraintTop_toBottomOf="@id/tv_Subtitulo1" />
 
     <TextView
         android:id="@+id/tv_Subtitulo2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
-        android:text="Ubicación"
+        android:text="@string/subtitulo_ubicacion"
         android:textColor="@color/teal_200"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -116,7 +116,7 @@
         android:layout_margin="12dp"
         android:layout_marginStart="72dp"
         android:layout_marginTop="136dp"
-        android:text="Tiempo"
+        android:text="@string/subtitulo_tiempo"
         android:textColor="@color/teal_200"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -138,7 +138,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="12dp"
-        android:text="Sitios de interés"
+        android:text="@string/subtitulo_sitios"
         android:textColor="@color/teal_200"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
@@ -160,7 +160,7 @@
         android:layout_height="20dp"
         android:background="@color/teal_200"
         android:gravity="center"
-        android:text="Misión Tic 2022 | Mobile Team"
+        android:text="@string/pie_de_pagina"
         android:textColor="@color/black"
         android:textSize="12dp"
         app:layout_constraintBottom_toBottomOf="parent"

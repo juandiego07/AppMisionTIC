@@ -9,35 +9,36 @@ import androidx.recyclerview.widget.RecyclerView
 
 class CustomAdapter: RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
 
-    val titles = arrayOf(
-        "Dubái creek, Zona Antigua",
-        "Dubai Mall",
-        "Fuente de Dubai",
-        "Safari en el Desierto Dedilay")
-
-    val ingresa = arrayOf(
-        "Ingresa",
-        "Ingresa",
-        "Ingresa",
-        "Ingresa")
-
     val images = arrayOf(
         R.drawable.dubai_1,
         R.drawable.dubai_2,
         R.drawable.dubai_3,
-        R.drawable.dubai_4)
+        R.drawable.dubai_4,
+        R.drawable.dubai_5)
 
+    val titles = arrayOf(
+        "Dubái creek, Zona Antigua",
+        "Dubái Mall",
+        "Fuente de Dubái",
+        "Safari en el Desierto Dedilay",
+        "Playa Burj Al Arab")
 
+    val description = arrayOf(
+        "Dubái Creek es el corazón de la ciudad",
+        "El Dubái Mall es el Centro Comercial más grande del mundo",
+        "No puedes perderte el show de aguas danzantes de la Fuente de Dubái",
+        "Recorre las arenas rojizas en un Safari por el Desierto de Dubái",
+        "Incursiona en el surf con las olas de la Playa Burj Al Arab")
 
     override fun onCreateViewHolder(viewGroup: ViewGroup, i: Int): ViewHolder {
         val v= LayoutInflater.from(viewGroup.context).inflate(R.layout.card_layout, viewGroup, false)
         return ViewHolder(v)
     }
 
-    override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
-        viewHolder.itemTitle.text=titles[i]
-        viewHolder.itemIngresa.text=ingresa[i]
-        viewHolder.itemImage.setImageResource(images[i])
+    override fun onBindViewHolder(objeto: ViewHolder, i: Int) {
+        objeto.itemImage.setImageResource(images[i])
+        objeto.itemTitle.text=titles[i]
+        objeto.itemDescription.text=description[i]
     }
 
     override fun getItemCount(): Int {
@@ -47,12 +48,12 @@ class CustomAdapter: RecyclerView.Adapter<CustomAdapter.ViewHolder>() {
     inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
         var itemImage: ImageView
         var itemTitle: TextView
-        var itemIngresa: TextView
+        var itemDescription: TextView
 
         init {
             itemImage = itemView.findViewById(R.id.item_image)
             itemTitle = itemView.findViewById(R.id.item_title)
-            itemIngresa = itemView.findViewById(R.id.item_Ingresa)
+            itemDescription = itemView.findViewById(R.id.item_description)
 
         }
 
