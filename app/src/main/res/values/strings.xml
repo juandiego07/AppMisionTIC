@@ -1,18 +1,7 @@
 <resources>
     <string name="app_name">TouristicSites</string>
 
-    <string name="descripcion_1">Dubái Creek es el corazón de la ciudad.
-Se caracteriza por el río natural que divide la ciudad entre
-Deira y Bur Dubái (cerca del Zoco de las Especias y del Barrio Antiguo de Dubái).
-Por su ubicación es posible decir que estás en el corazón de la ciudad.</string>
-
-    <string name="titulo1">Dubái Creek, Zona Antígua</string>
-
-    <string name="ubicacion_1">Se adentra en la tierra unos 10  de la costa</string>
-
-    <string name="tiempo_1">24 °C, viento del O a 16 km/h, humedad del 72 %</string>
-
-    <string name="sitios_1">- Zoco de las Especias de Dubái (207 m) \n- Al Bastakiya (310 m)\n- Museo de Dubái (320 m)Deira (352 m) \n- Al-Ahmadiya School (394 m)</string>
+    <string name="dubai">Dubái</string>
 
     <string name="subtitulo_descripcion">Descripción</string>
 
@@ -21,6 +10,26 @@ Por su ubicación es posible decir que estás en el corazón de la ciudad.</stri
     <string name="subtitulo_tiempo">Tiempo</string>
 
     <string name="subtitulo_sitios">Sitios de interés</string>
+
+    <string name="pie_de_pagina">Misión Tic 2022 | Mobile Team</string>
+
+
+
+
+    <string name="titulo1">Dubái Creek, Zona Antígua</string>
+
+    <string name="descripcion_1">Dubái Creek es el corazón de la ciudad.
+Se caracteriza por el río natural que divide la ciudad entre
+Deira y Bur Dubái (cerca del Zoco de las Especias y del Barrio Antiguo de Dubái).
+Por su ubicación es posible decir que estás en el corazón de la ciudad.</string>
+
+    <string name="descripcion_corta_1">Dubái Creek es el corazón de la ciudad</string>
+
+    <string name="ubicacion_1">Se adentra en la tierra unos 10  de la costa</string>
+
+    <string name="tiempo_1">24 °C, viento del O a 16 km/h, humedad del 72 %</string>
+
+    <string name="sitios_1">- Zoco de las Especias de Dubái (208 m) \n- Al Bastakiya (310 m)\n- Museo de Dubái (320 m) \n- Deira (352 m) \n- Al-Ahmadiya School (394 m)</string>
 
 </resources>
 
