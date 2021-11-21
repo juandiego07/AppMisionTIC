@@ -26,9 +26,9 @@ class SitesAdapter(val sites: List<DataSites>) : RecyclerView.Adapter<SitesAdapt
     class SitesViewHolder (val view:View) : RecyclerView.ViewHolder(view) {
         fun render( site: DataSites) {
             view.findViewById<TextView>(R.id.tvNombre).text = site.nombre
-            view.findViewById<TextView>(R.id.tvDescripcion).text = site.descripcion
+            view.findViewById<TextView>(R.id.tvDescripcion).text = "Descripción: "+site.resumen
             view.findViewById<TextView>(R.id.tvRanking).text = site.ranking
-            Picasso.get().load("http://i.imgur.com/DvpvklR.png").into(view.findViewById<ImageView>(R.id.ivImg))
+            Picasso.get().load(site.imagen).into(view.findViewById<ImageView>(R.id.ivImg))
             //Glide.with(context)
             //    .load(site.imagen)
             //    .into(view.findViewById<ImageView>(R.id.ivImg))
