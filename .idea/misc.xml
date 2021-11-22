@@ -5,6 +5,7 @@
       <map>
         <entry key="..\:/Users/COMPUMAX/AndroidStudioProjects/AppMisionTIC/app/src/main/res/layout/activity_main.xml" value="0.32592592592592595" />
         <entry key="..\:/Users/COMPUMAX/AndroidStudioProjects/AppMisionTIC/app/src/main/res/layout/activity_main2.xml" value="0.36666666666666664" />
+        <entry key="..\:/Users/COMPUMAX/AndroidStudioProjects/AppMisionTIC/app/src/main/res/layout/card_layout.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/COMPUMAX/AndroidStudioProjects/AppMisionTIC/app/src/main/res/mipmap-anydpi-v26/logo_turistic3.xml" value="0.3828125" />
         <entry key="..\:/Users/COMPUMAX/Desktop/AppMisionTIC/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
         <entry key="..\:/Users/COMPUMAX/Downloads/AppMisionTIC/app/src/main/res/layout/activity_main.xml" value="0.36666666666666664" />
@@ -14,8 +15,14 @@
         <entry key="..\:/Users/USUARIO/StudioProjects/AppMisionTIC/app/src/main/res/layout/activity_main2.xml" value="0.22" />
         <entry key="..\:/Users/USUARIO/StudioProjects/AppMisionTIC/app/src/main/res/layout/card_layout.xml" value="0.25" />
         <entry key="..\:/Users/diego.vargas.EPAYCO/Documents/AndroidStudioProjects/TouristicSites/app/src/main/res/layout/activity_main.xml" value="0.2957427536231884" />
+        <entry key="..\:/Users/diego.vargas.EPAYCO/Documents/AndroidStudioProjects/TouristicSites/app/src/main/res/layout/activity_main2.xml" value="0.21447368421052632" />
+        <entry key="..\:/Users/diego.vargas.EPAYCO/Documents/AndroidStudioProjects/TouristicSites/app/src/main/res/layout/card_layout.xml" value="0.3087719298245614" />
+        <entry key="..\:/Users/diego.vargas.EPAYCO/Documents/AndroidStudioProjects/TouristicSites/app/src/main/res/layout/card_layout2.xml" value="0.3087719298245614" />
       </map>
     </option>
+  </component>
+  <component name="ProjectPlainTextFileTypeManager">
+    <file url="file://$PROJECT_DIR$/app/src/testDebug/delete/dataSites.json" />
   </component>
   <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
     <output url="file://$PROJECT_DIR$/build/classes" />

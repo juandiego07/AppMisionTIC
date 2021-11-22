@@ -1,0 +1,47 @@
+[
+  {
+    "titulo": "Dubái Creek, Zona Antígua",
+    "descripcion": "Dubái Creek es el corazón de la ciudad. Se caracteriza por el río natural que divide la ciudad entre Deira y Bur Dubái (cerca del Zoco de las Especias y del Barrio Antiguo de Dubái). Por su ubicación es posible decir que estás en el corazón de la ciudad.",
+    "descripcion_corta": "Dubái Creek es el corazón de la ciudad.",
+    "ubicacion": "Se adentra en la tierra unos 10  de la costa",
+    "tiempo": "24 °C, viento del O a 16 km/h, humedad del 72 %",
+    "sitios": "- Zoco de las Especias de Dubái (208 m) \n- Al Bastakiya (310 m)\n- Museo de Dubái (320 m) \n- Deira (352 m) \n- Al-Ahmadiya School (394 m)",
+    "ruta_imagen": "https://lanzateyviaja.com/wp-content/uploads/2019/12/DUBAI-CREEK-ZONA-ANTIGUA-Dubai.jpg"
+  },
+  {
+    "titulo": "Dubái Mall",
+    "descripcion": "Tiene una extensión de 111 hectáreas dentro de las que podrás encontrar más de 1.200 tiendas y 14.000 puestos de parking. Además de los comercios típicos que alberga (que varían para todo tipo de bolsillo y en las que podrás encontrar literalmente cualquiera de las cosas que busques), también encontrarás una fabulosa pista de patinaje sobre hielo y su impresionante e imperdible acuario. Para los más pequeños existe una sala recreativa llamada Kidzania, donde podrán desarrollar profesiones de adulto.",
+    "descripcion_corta": "El Dubái Mall es el Centro Comercial más grande del mundo.",
+    "ubicacion": "Usando el metro te quedas en la estación Burj Khalifa-Dubái Mall. ",
+    "tiempo": "25 °C, viento del O a 15 km/h, humedad del 60 %",
+    "sitios": "- Dubai Aquarium \n- Underwater Zoo 2\n- VR Park Dubai \n- KidZania",
+    "ruta_imagen": "https://cdn.getyourguide.com/img/location/540dc8b545723-m1409922157.jpg/88.jpg"
+  },
+  {
+    "titulo": "Fuente de Dubái",
+    "descripcion": "La grandiosa Fuente de Dubái está situada en el lago artificial del Burj Khalifa, en el fondo del barrio Downtown en Dubái. Este show gratuito empieza cada día a las 18:30 horas por cinco minutos y se activa cada media hora hasta la medianoche, podrás observarlo desde la calle, pero como es uno de los sitios famosos de Dubái te recomendamos llegar temprano si no quieres que la multitud te deje sin vista.",
+    "descripcion_corta": "No puedes perderte el show de aguas danzantes de la Fuente de Dubái.",
+    "ubicacion": "Podrás llegar tomando sencillamente la línea roja del metro y quedarte en la Estación Burj Khalifa- Dubái Mall.",
+    "tiempo": "22 °C, viento del 5 a 20 km/h, humedad del 70 %",
+    "sitios": "- Kimura-ya Authentic Japanese Restaurant \n- The Meat Co \n- The Burj Club \n- Abd El Wahab",
+    "ruta_imagen": "https://media.tacdn.com/media/attractions-splice-spp-674x446/06/df/93/8b.jpg"
+  },
+  {
+    "titulo": "Safari en el Desierto Dedilay",
+    "descripcion": "Si buscas qué hacer en Dubái, no te preocupes, hay cosas para todos los gustos, en este caso para los amantes de los deportes extremos. El Safari por el Desierto es una de las excursiones más populares entre los turistas. En el recorrido cruzarás las dunas de lado a lado sobre un 4×4 inclinándose a su paso de una forma que desafía la gravedad, y te rodearás 360 grados de la arena rojiza que caracteriza al desierto de Arabia.",
+    "descripcion_corta": "Recorre las arenas rojizas en un Safari por el Desierto de Dubái.",
+    "ubicacion": "Se encuentra a 4.1 km desde el centro de la ciudad",
+    "tiempo": "35 °C, viento del 10 a 30 km/h, humedad del 75 %",
+    "sitios": "- Campamento de inspiración beduina \n- Dubai Desert Conservation Reserve \n- Exhibición de cetrería",
+    "ruta_imagen": "https://cdn2.civitatis.com/emiratos-arabes-unidos/dubai/galeria/header/puesta-sol-desierto-dubai-safari.jpg"
+  },
+  {
+    "titulo": "Playa Burj Al Arab",
+    "descripcion": "Si lo que quieres es relajarte en los días soleados, la Burj Al Arab es perfecta para ti. Ubicada en Jumeirah, se divide en dos partes: una para los surfistas y otra para los turistas que desean relajarse. En ésta última podrás encontrar servicios de duchas y vestuarios a la vez que obtienes una vista espectacular del Hotel Burj Al Arab, por eso se ha convertido en uno de los lugares atractivos en Dubái.",
+    "descripcion_corta": "Incursiona en el surf con las olas de la Playa Burj Al Arab.",
+    "ubicacion": "Se ubicda a orillas de la ciudad",
+    "tiempo": "30 °C, viento del 10 a 20 km/h, humedad del 65 %",
+    "sitios": "- Burj Al-Arab Hotel \n- Torre Burj khalifa\n-  Isla artificial \n- Playa de Jumeira",
+    "ruta_imagen": "https://p0.pikist.com/photos/393/564/dubai-sail-uae-burj-al-arab-hotel-building-beach-canvas-jumeirah.jpg"
+  }
+]
