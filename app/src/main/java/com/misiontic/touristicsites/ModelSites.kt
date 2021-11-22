@@ -7,5 +7,6 @@ data class ModelSites(
     val ubicacion: String,
     val tiempo: String,
     val sitios: String,
-    val ruta_imagen: String
+    val ruta_imagen: String,
+    val score: String,
 )

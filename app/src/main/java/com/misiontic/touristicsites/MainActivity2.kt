@@ -38,11 +38,11 @@ class MainActivity2 : AppCompatActivity() {
                     ubicacion = dataSite.getString("ubicacion"),
                     tiempo = dataSite.getString("tiempo"),
                     sitios = dataSite.getString("sitios"),
-                    ruta_imagen = dataSite.getString("ruta_imagen")
+                    ruta_imagen = dataSite.getString("ruta_imagen"),
+                    score = dataSite.getString("score")
                 )
                 modelSites.add(site)
             }
-            Log.d("Arreglo", "$modelSites")
         } catch (e: JSONException) {
             e.printStackTrace()
         }
