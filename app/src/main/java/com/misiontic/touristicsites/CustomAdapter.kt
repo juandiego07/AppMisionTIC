@@ -27,6 +27,7 @@ class CustomAdapter(val sites: List<ModelSites>, val context: Context) :
         fun render(site: ModelSites) {
             view.findViewById<TextView>(R.id.item_title).text = site.titulo
             view.findViewById<TextView>(R.id.item_description).text = site.descripcion_corta
+            view.findViewById<TextView>(R.id.item_score).text = "Puntaje: "+site.score
             Glide.with(context).load(site.ruta_imagen).into(view.findViewById(R.id.item_image))
         }
     }
