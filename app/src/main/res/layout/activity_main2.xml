@@ -41,6 +41,16 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:background="@color/alfa"
+        android:src="@drawable/menu_puntos_negro"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="@id/tvDubai"
+        app:layout_constraintTop_toTopOf="@id/tvDubai" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
