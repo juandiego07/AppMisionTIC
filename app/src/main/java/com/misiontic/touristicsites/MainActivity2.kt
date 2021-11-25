@@ -1,30 +1,90 @@
 package com.misiontic.touristicsites
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
+import android.view.View
+import android.widget.TextView
+import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import org.json.JSONArray
+import org.json.JSONException
+import java.io.IOException
 
 class MainActivity2 : AppCompatActivity() {
 
-    var sites: List<DataSites> = listOf(
-            DataSites("Central Park", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/New_York_City-Manhattan-Central_Park_%28Gentry%29.jpg/1200px-New_York_City-Manhattan-Central_Park_%28Gentry%29.jpg", "es un parque urbano público situado en el distrito metropolitano de Manhattan, en la ciudad de Nueva York, Estados Unidos. El parque tiene forma rectangular y dimensiones aproximadas de 4000 x 800 m, siendo superior en tamaño a las dos naciones más pequeñas del mundo; es casi dos veces más grande que Mónaco y casi ocho veces más que la Ciudad del Vaticano.1\u200B2\u200B3\u200B Si bien, su tamaño es algo inferior a la mitad del Bosque de Bolonia en París y una quinta parte de la Casa de Campo en Madrid.4\u200B", "es un parque urbano público situado en el distrito metropolitano de Manhattan, en la ciudad de Nueva York, Estados Unidos", "10", "40°46′57″N 73°57′58″O", "7°", "Museo 11S, Mirador Empire State"),
-            DataSites("Central Park", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/New_York_City-Manhattan-Central_Park_%28Gentry%29.jpg/1200px-New_York_City-Manhattan-Central_Park_%28Gentry%29.jpg", "es un parque urbano público situado en el distrito metropolitano de Manhattan, en la ciudad de Nueva York, Estados Unidos. El parque tiene forma rectangular y dimensiones aproximadas de 4000 x 800 m, siendo superior en tamaño a las dos naciones más pequeñas del mundo; es casi dos veces más grande que Mónaco y casi ocho veces más que la Ciudad del Vaticano.1\u200B2\u200B3\u200B Si bien, su tamaño es algo inferior a la mitad del Bosque de Bolonia en París y una quinta parte de la Casa de Campo en Madrid.4\u200B", "es un parque urbano público situado en el distrito metropolitano de Manhattan, en la ciudad de Nueva York, Estados Unidos", "10", "40°46′57″N 73°57′58″O", "7°", "Museo 11S, Mirador Empire State"),
-            DataSites("Central Park", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/New_York_City-Manhattan-Central_Park_%28Gentry%29.jpg/1200px-New_York_City-Manhattan-Central_Park_%28Gentry%29.jpg", "es un parque urbano público situado en el distrito metropolitano de Manhattan, en la ciudad de Nueva York, Estados Unidos. El parque tiene forma rectangular y dimensiones aproximadas de 4000 x 800 m, siendo superior en tamaño a las dos naciones más pequeñas del mundo; es casi dos veces más grande que Mónaco y casi ocho veces más que la Ciudad del Vaticano.1\u200B2\u200B3\u200B Si bien, su tamaño es algo inferior a la mitad del Bosque de Bolonia en París y una quinta parte de la Casa de Campo en Madrid.4\u200B", "es un parque urbano público situado en el distrito metropolitano de Manhattan, en la ciudad de Nueva York, Estados Unidos", "10", "40°46′57″N 73°57′58″O", "7°", "Museo 11S, Mirador Empire State"),
-            DataSites("Central Park", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/New_York_City-Manhattan-Central_Park_%28Gentry%29.jpg/1200px-New_York_City-Manhattan-Central_Park_%28Gentry%29.jpg", "es un parque urbano público situado en el distrito metropolitano de Manhattan, en la ciudad de Nueva York, Estados Unidos. El parque tiene forma rectangular y dimensiones aproximadas de 4000 x 800 m, siendo superior en tamaño a las dos naciones más pequeñas del mundo; es casi dos veces más grande que Mónaco y casi ocho veces más que la Ciudad del Vaticano.1\u200B2\u200B3\u200B Si bien, su tamaño es algo inferior a la mitad del Bosque de Bolonia en París y una quinta parte de la Casa de Campo en Madrid.4\u200B", "es un parque urbano público situado en el distrito metropolitano de Manhattan, en la ciudad de Nueva York, Estados Unidos", "10", "40°46′57″N 73°57′58″O", "7°", "Museo 11S, Mirador Empire State"),
-            DataSites("Central Park", "https://upload.wikimedia.org/wikipedia/commons/thumb/e/ee/New_York_City-Manhattan-Central_Park_%28Gentry%29.jpg/1200px-New_York_City-Manhattan-Central_Park_%28Gentry%29.jpg", "es un parque urbano público situado en el distrito metropolitano de Manhattan, en la ciudad de Nueva York, Estados Unidos. El parque tiene forma rectangular y dimensiones aproximadas de 4000 x 800 m, siendo superior en tamaño a las dos naciones más pequeñas del mundo; es casi dos veces más grande que Mónaco y casi ocho veces más que la Ciudad del Vaticano.1\u200B2\u200B3\u200B Si bien, su tamaño es algo inferior a la mitad del Bosque de Bolonia en París y una quinta parte de la Casa de Campo en Madrid.4\u200B", "es un parque urbano público situado en el distrito metropolitano de Manhattan, en la ciudad de Nueva York, Estados Unidos", "10", "40°46′57″N 73°57′58″O", "7°", "Museo 11S, Mirador Empire State")
-    )
+    private var modelSites = arrayListOf<ModelSites>()
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+        this.supportActionBar?.hide()
         setContentView(R.layout.activity_main2)
-        initRecycleView()
+
+        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+        initDataJson()
+        var adapter = CustomAdapter(modelSites, this) { site ->
+            detailSite(site)
+        }
+        recyclerView.layoutManager = LinearLayoutManager(this)
+        recyclerView.adapter = adapter
     }
 
-    fun initRecycleView() {
-        val recycle = findViewById<RecyclerView>(R.id.rvSites)
-        recycle.layoutManager = LinearLayoutManager(this)
-        val adapter = SitesAdapter(sites)
-        recycle.adapter = adapter
+    private fun initDataJson() {
+        val dataJson = readDataJson()
+        try {
+            val dataSites = JSONArray(dataJson)
+            for (i in 0 until dataSites.length()) {
+                val dataSite = dataSites.getJSONObject(i)
+                val site = ModelSites(
+                    titulo = dataSite.getString("titulo"),
+                    descripcion = dataSite.getString("descripcion"),
+                    descripcion_corta = dataSite.getString("descripcion_corta"),
+                    ubicacion = dataSite.getString("ubicacion"),
+                    tiempo = dataSite.getString("tiempo"),
+                    sitios = dataSite.getString("sitios"),
+                    ruta_imagen = dataSite.getString("ruta_imagen"),
+                    score = dataSite.getString("score")
+                )
+                modelSites.add(site)
+            }
+        } catch (e: JSONException) {
+            e.printStackTrace()
+        }
     }
+
+    private fun readDataJson(): String? {
+
+        var dataJson: String? = null
+
+        try {
+            val dataRead = assets.open("mock_ciudades.json")
+            val size = dataRead.available()
+            val dataCache = ByteArray(size)
+            dataRead.read(dataCache)
+            dataRead.close()
+            dataJson = String(dataCache)
+        } catch (e: IOException) {
+            e.printStackTrace()
+        }
+        return dataJson
+    }
+
+    fun detailSite(site: ModelSites?) {
+        val intent = Intent(this, MainActivity::class.java).apply {
+            putExtra("titulo", "${site?.titulo}")
+            putExtra("descripcion", "${site?.descripcion}")
+            putExtra("descripcion_corta", "${site?.descripcion_corta}")
+            putExtra("ubicacion", "${site?.ubicacion}")
+            putExtra("tiempo", "${site?.tiempo}")
+            putExtra("sitios", "${site?.sitios}")
+            putExtra("ruta_imagen", "${site?.ruta_imagen}")
+            putExtra("score", "${site?.score}")
+        }
+        startActivity(intent)
+    }
+
 }
