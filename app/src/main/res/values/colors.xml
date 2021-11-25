@@ -5,4 +5,9 @@
     <color name="white">#FFFFFFFF</color>
     <color name="gris">#00434C</color>
     <color name="alfa">#00FFFFFF</color>
+
+
+    <color name="colorUno">#23D1E6</color>
+    <color name="colorDos">#00ACC1</color>
+    <color name="colorTres">#00897B</color>
 </resources>

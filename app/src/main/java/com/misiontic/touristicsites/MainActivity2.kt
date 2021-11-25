@@ -1,8 +1,13 @@
 package com.misiontic.touristicsites
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
+import android.view.View
+import android.widget.TextView
+import android.widget.Toast
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.json.JSONArray
@@ -13,14 +18,17 @@ class MainActivity2 : AppCompatActivity() {
 
     private var modelSites = arrayListOf<ModelSites>()
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         this.supportActionBar?.hide()
         setContentView(R.layout.activity_main2)
 
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        val adapter = CustomAdapter(modelSites, this)
         initDataJson()
+        var adapter = CustomAdapter(modelSites, this) { site ->
+            detailSite(site)
+        }
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
     }
@@ -38,11 +46,11 @@ class MainActivity2 : AppCompatActivity() {
                     ubicacion = dataSite.getString("ubicacion"),
                     tiempo = dataSite.getString("tiempo"),
                     sitios = dataSite.getString("sitios"),
-                    ruta_imagen = dataSite.getString("ruta_imagen")
+                    ruta_imagen = dataSite.getString("ruta_imagen"),
+                    score = dataSite.getString("score")
                 )
                 modelSites.add(site)
             }
-            Log.d("Arreglo", "$modelSites")
         } catch (e: JSONException) {
             e.printStackTrace()
         }
@@ -64,4 +72,19 @@ class MainActivity2 : AppCompatActivity() {
         }
         return dataJson
     }
+
+    fun detailSite(site: ModelSites?) {
+        val intent = Intent(this, MainActivity::class.java).apply {
+            putExtra("titulo", "${site?.titulo}")
+            putExtra("descripcion", "${site?.descripcion}")
+            putExtra("descripcion_corta", "${site?.descripcion_corta}")
+            putExtra("ubicacion", "${site?.ubicacion}")
+            putExtra("tiempo", "${site?.tiempo}")
+            putExtra("sitios", "${site?.sitios}")
+            putExtra("ruta_imagen", "${site?.ruta_imagen}")
+            putExtra("score", "${site?.score}")
+        }
+        startActivity(intent)
+    }
+
 }
