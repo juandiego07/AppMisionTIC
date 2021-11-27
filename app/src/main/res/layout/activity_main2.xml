@@ -4,75 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/black"
     tools:context=".MainActivity2">
 
-    <ImageView
-        android:id="@+id/iv_mapa"
-        android:layout_width="match_parent"
-        android:layout_height="340dp"
-        android:scaleType="centerCrop"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/mapa_dubai_noche2" />
+   <fragment
+       android:name="com.misiontic.touristicsites.List_Fragment"
+       android:layout_width="match_parent"
+       android:layout_height="match_parent"
+       android:id="@+id/fragment_recycler">
 
-    <ImageView
-        android:id="@+id/iv_logo"
-        android:layout_width="250dp"
-        android:layout_height="250dp"
-        app:layout_constraintBottom_toTopOf="@+id/tvDubai"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/logo_turistic2" />
-
-    <TextView
-        android:id="@+id/tvDubai"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/teal_200"
-        android:gravity="center"
-        android:text="@string/dubai"
-        android:textColor="@color/black"
-        android:textSize="30sp"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toBottomOf="@id/iv_mapa"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageButton
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="4dp"
-        android:background="@color/alfa"
-        android:src="@drawable/menu_puntos_negro"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toBottomOf="@id/tvDubai"
-        app:layout_constraintTop_toTopOf="@id/tvDubai" />
-
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="20dp"
-        android:background="@color/teal_200"
-        android:gravity="center"
-        android:text="Misión Tic 2022 | Mobile Team"
-        android:textColor="@color/black"
-        android:textSize="12dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/recyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_marginTop="0dp"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
-        app:layout_constraintTop_toBottomOf="@id/tvDubai"
-        tools:ignore="MissingConstraints"
-        tools:layout_editor_absoluteX="1dp" />
+   </fragment>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

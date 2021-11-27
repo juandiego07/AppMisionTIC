@@ -26,6 +26,8 @@ Por su ubicación es posible decir que estás en el corazón de la ciudad.</stri
     <string name="tiempo_1">24 °C, viento del O a 16 km/h, humedad del 72 %</string>
 
     <string name="sitios_1">- Zoco de las Especias de Dubái (208 m) \n- Al Bastakiya (310 m)\n- Museo de Dubái (320 m) \n- Deira (352 m) \n- Al-Ahmadiya School (394 m)</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 
 </resources>
 
