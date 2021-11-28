@@ -4,7 +4,7 @@
     <item
         android:width="240dp"
         android:height="240dp"
-        android:left="90dp"
+        android:left="60dp"
         android:right="60dp"
         android:top="240dp">
         <bitmap android:src="@drawable/logo_turistic2"/>
