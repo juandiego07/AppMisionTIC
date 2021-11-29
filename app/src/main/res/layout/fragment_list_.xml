@@ -68,6 +68,7 @@
             app:layout_constraintEnd_toEndOf="@id/tvDubai"
             app:layout_constraintTop_toTopOf="@id/tvDubai" />
 
+
         <fragment
             android:id="@+id/f_footer"
             android:name="com.misiontic.touristicsites.FooterFragment"

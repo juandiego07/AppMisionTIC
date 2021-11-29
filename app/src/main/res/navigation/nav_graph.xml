@@ -1,6 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    android:id="@+id/nav_graph">
-
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/list_Fragment2">
+    <fragment
+        android:id="@+id/list_Fragment2"
+        android:name="com.misiontic.touristicsites.List_Fragment"
+        android:label="fragment_list_"
+        tools:layout="@layout/fragment_list_" >
+        <action
+            android:id="@+id/action_list_Fragment2_to_preferenceFragment2"
+            app:destination="@id/preferenceFragment2" />
+    </fragment>
+    <fragment
+        android:id="@+id/preferenceFragment2"
+        android:name="com.misiontic.touristicsites.PreferenceFragment"
+        android:label="fragment_preference"
+        tools:layout="@layout/fragment_preference" >
+        <action
+            android:id="@+id/action_preferenceFragment2_to_list_Fragment2"
+            app:destination="@id/list_Fragment2" />
+    </fragment>
 </navigation>
