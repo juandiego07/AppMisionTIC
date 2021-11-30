@@ -6,13 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-   <fragment
-       android:name="com.misiontic.touristicsites.List_Fragment"
-       android:layout_width="match_parent"
-       android:layout_height="match_parent"
-       android:id="@+id/fragment_recycler">
 
-   </fragment>
+    <fragment
+        android:id="@+id/fragmentContainerView"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:defaultNavHost="true"
+        app:navGraph="@navigation/nav_graph" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
