@@ -6,15 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.navigation.fragment.findNavController
 
 
 class List_Fragment : Fragment() {
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-
-    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -27,9 +23,9 @@ class List_Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        val button = view.findViewById<Button>(R.id.ib_config)
+        val button = view.findViewById<ImageButton>(R.id.ib_config)
         button.setOnClickListener {
-            findNavController().navigate(R.id.action_list_Fragment2_to_preferenceFragment2)
+            findNavController().navigate(R.id.action_list_Fragment_to_preferenceFragment)
         }
     }
 
