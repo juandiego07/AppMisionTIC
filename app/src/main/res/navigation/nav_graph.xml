@@ -3,26 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/list_Fragment">
-
+    app:startDestination="@id/list_Fragment2">
     <fragment
-        android:id="@+id/list_Fragment"
+        android:id="@+id/list_Fragment2"
         android:name="com.misiontic.touristicsites.List_Fragment"
         android:label="fragment_list_"
         tools:layout="@layout/fragment_list_" >
         <action
-            android:id="@+id/action_list_Fragment_to_preferenceFragment"
+            android:id="@+id/action_list_Fragment2_to_preferenceFragment"
             app:destination="@id/preferenceFragment" />
     </fragment>
-
     <fragment
         android:id="@+id/preferenceFragment"
         android:name="com.misiontic.touristicsites.PreferenceFragment"
         android:label="fragment_preference"
         tools:layout="@layout/fragment_preference" >
         <action
-            android:id="@+id/action_preferenceFragment_to_list_Fragment"
-            app:destination="@id/list_Fragment" />
+            android:id="@+id/action_preferenceFragment_to_list_Fragment2"
+            app:destination="@id/list_Fragment2" />
     </fragment>
-
 </navigation>

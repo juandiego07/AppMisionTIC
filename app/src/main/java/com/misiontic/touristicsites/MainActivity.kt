@@ -10,8 +10,7 @@ import org.json.JSONException
 import java.io.IOException
 
 class MainActivity : AppCompatActivity() {
-
-    private var modelSites = arrayListOf<ModelSites>()
+    //private var modelSites = arrayListOf<ModelSites>()
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -19,15 +18,16 @@ class MainActivity : AppCompatActivity() {
         this.supportActionBar?.hide()
         setContentView(R.layout.activity_main)
 
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        initDataJson()
-        var adapter = CustomAdapter(modelSites, this) { site ->
-            detailSite(site)
-        }
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = adapter
+        /*  val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
+          initDataJson()
+          var adapter = CustomAdapter(modelSites, this) { site ->
+              detailSite(site)
+          }
+          recyclerView.layoutManager = LinearLayoutManager(this)
+          recyclerView.adapter = adapter*/
     }
 
+    /*
     private fun initDataJson() {
         val dataJson = readDataJson()
         try {
@@ -81,5 +81,5 @@ class MainActivity : AppCompatActivity() {
         }
         startActivity(intent)
     }
-
+*/
 }
