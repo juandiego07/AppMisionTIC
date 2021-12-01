@@ -37,22 +37,18 @@ class List_Fragment : Fragment() {
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter
 
-        val button = view.findViewById<ImageButton>(R.id.ib_config)
-        button.setOnClickListener {
-            Navigation.findNavController(view).navigate(R.id.action_list_Fragment2_to_preferenceFragment)
-        }
 
         return view
     }
 
-    /*  override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
           super.onViewCreated(view, savedInstanceState)
 
-          val button = view.findViewById<Button>(R.id.ib_config)
-          button.setOnClickListener {
-              findNavController().navigate(R.id.action_list_Fragment2_to_preferenceFragment2)
-          }
-      }*/
+         val button = view.findViewById<ImageButton>(R.id.ib_config)
+         button.setOnClickListener {
+             Navigation.findNavController(view).navigate(R.id.action_list_Fragment2_to_preferenceFragment)
+         }
+      }
 
     private fun initDataJson() {
         val dataJson = readDataJson()
