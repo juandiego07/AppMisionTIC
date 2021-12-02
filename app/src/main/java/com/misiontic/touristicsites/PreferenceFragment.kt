@@ -6,6 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.ImageButton
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 
@@ -19,14 +20,18 @@ class PreferenceFragment : Fragment() {
         // Inflate the layout for this fragment
         val view =inflater.inflate(R.layout.fragment_preference, container, false)
 
-        //val button = view.findViewById<Button>(R.id.ib_back)
-        // button.setOnClickListener {
-        //Navigation.findNavController(view).navigate(R.id.action_preferenceFragment_to_list_Fragment2)
-
-        //}
         return view
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        val button = view.findViewById<ImageButton>(R.id.ib_back)
+         button.setOnClickListener {
+        Navigation.findNavController(view).navigate(R.id.action_preferenceFragment_to_list_Fragment2)
+
+        }
+    }
 
 
 }
