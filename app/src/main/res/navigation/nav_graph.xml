@@ -12,6 +12,9 @@
         <action
             android:id="@+id/action_list_Fragment2_to_preferenceFragment"
             app:destination="@id/preferenceFragment" />
+        <action
+            android:id="@+id/action_list_Fragment2_to_poiFragment"
+            app:destination="@id/poiFragment" />
     </fragment>
     <fragment
         android:id="@+id/preferenceFragment"
@@ -22,4 +25,9 @@
             android:id="@+id/action_preferenceFragment_to_list_Fragment2"
             app:destination="@id/list_Fragment2" />
     </fragment>
+    <fragment
+        android:id="@+id/poiFragment"
+        android:name="com.misiontic.touristicsites.PoiFragment"
+        android:label="fragment_poi"
+        tools:layout="@layout/fragment_poi" />
 </navigation>

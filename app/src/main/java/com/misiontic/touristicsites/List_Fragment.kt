@@ -26,26 +26,28 @@ class List_Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view= inflater.inflate(R.layout.fragment_list_, container, false)
+        return inflater.inflate(R.layout.fragment_list_, container, false)
+    }
+
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
         initDataJson()
+
         var adapter = CustomAdapter(modelSites, requireContext()) { site ->
             detailSite(site)
         }
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = adapter
 
-        return view
+        val button = view.findViewById<ImageButton>(R.id.ib_config)
+        button.setOnClickListener {
+            Navigation.findNavController(view)
+                .navigate(R.id.action_list_Fragment2_to_preferenceFragment)
+        }
     }
-
-      override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-          super.onViewCreated(view, savedInstanceState)
-          val button = view.findViewById<ImageButton>(R.id.ib_config)
-          button.setOnClickListener {
-              Navigation.findNavController(view).navigate(R.id.action_list_Fragment2_to_preferenceFragment)
-          }
-      }
 
     private fun initDataJson() {
         val dataJson = readDataJson()
