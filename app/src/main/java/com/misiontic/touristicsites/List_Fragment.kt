@@ -44,8 +44,7 @@ class List_Fragment : Fragment() {
 
         val button = view.findViewById<ImageButton>(R.id.ib_config)
         button.setOnClickListener {
-            Navigation.findNavController(view)
-                .navigate(R.id.action_list_Fragment2_to_preferenceFragment)
+            Navigation.findNavController(view).navigate(R.id.action_list_Fragment2_to_preferenceFragment)
         }
     }
 
