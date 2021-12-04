@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".List_Fragment">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <ImageView
+            android:id="@+id/iv_mapa"
+            android:layout_width="match_parent"
+            android:layout_height="340dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/mapa_dubai_noche2" />
+
+        <pl.droidsonroids.gif.GifImageView
+            android:layout_width="300dp"
+            android:layout_height="300dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/dubai_7"
+            app:layout_constraintLeft_toLeftOf="@id/iv_mapa"
+            app:layout_constraintTop_toTopOf="@id/iv_mapa"
+            app:layout_constraintBottom_toTopOf="@id/tvDubai"
+            app:layout_constraintRight_toRightOf="@id/iv_mapa"
+
+
+            />
+
+        <TextView
+            android:id="@+id/tvDubai"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/teal_200"
+            android:gravity="center"
+            android:text="@string/dubai"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@id/iv_mapa"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/f_footer"
+            app:layout_constraintTop_toBottomOf="@id/tvDubai"
+            tools:ignore="MissingConstraints"
+            tools:layout_editor_absoluteX="1dp" />
+
+        <ImageButton
+            android:id="@+id/ib_config"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/alfa"
+            android:clickable="true"
+            android:src="@drawable/menu_puntos_negro"
+            app:layout_constraintBottom_toBottomOf="@id/tvDubai"
+            app:layout_constraintEnd_toEndOf="@id/tvDubai"
+            app:layout_constraintTop_toTopOf="@id/tvDubai" />
+
+
+        <fragment
+            android:id="@+id/f_footer"
+            android:name="com.misiontic.touristicsites.FooterFragment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent">
+
+        </fragment>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</LinearLayout>

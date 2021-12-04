@@ -3,6 +3,8 @@
 
     <string name="dubai">Dubái</string>
 
+    <string name="footer">Misión Tic 2022 | Mobile Team</string>
+
     <string name="subtitulo_descripcion">Descripción</string>
 
     <string name="subtitulo_ubicacion">Ubicación</string>
@@ -13,6 +15,7 @@
 
     <string name="pie_de_pagina">Misión Tic 2022 | Mobile Team</string>
 
+    <string name="configuracion">Configuración</string>
 
     <string name="titulo1">Dubái Creek, Zona Antígua</string>
 
@@ -26,6 +29,11 @@ Por su ubicación es posible decir que estás en el corazón de la ciudad.</stri
     <string name="tiempo_1">24 °C, viento del O a 16 km/h, humedad del 72 %</string>
 
     <string name="sitios_1">- Zoco de las Especias de Dubái (208 m) \n- Al Bastakiya (310 m)\n- Museo de Dubái (320 m) \n- Deira (352 m) \n- Al-Ahmadiya School (394 m)</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="activar_sonido">Activar sonido para notificaciones</string>
+    <string name="autorizar_notificaciones">Autorizar Notificaciones</string>
+
 
 </resources>
 

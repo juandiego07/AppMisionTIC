@@ -1,37 +1,51 @@
 package com.misiontic.touristicsites
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
+import androidx.fragment.app.Fragment
+import android.view.LayoutInflater
 import android.view.View
-import android.widget.TextView
-import android.widget.Toast
-import androidx.cardview.widget.CardView
+import android.view.ViewGroup
+import android.widget.Button
+import android.widget.ImageButton
+import androidx.navigation.Navigation
+import androidx.navigation.fragment.NavHostFragment.findNavController
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.json.JSONArray
 import org.json.JSONException
 import java.io.IOException
 
-class MainActivity2 : AppCompatActivity() {
+class List_Fragment : Fragment() {
 
     private var modelSites = arrayListOf<ModelSites>()
 
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        this.supportActionBar?.hide()
-        setContentView(R.layout.activity_main2)
-
-        val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
-        initDataJson()
-        var adapter = CustomAdapter(modelSites, this) { site ->
-            detailSite(site)
-        }
-        recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = adapter
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
+        // Inflate the layout for this fragment
+        return inflater.inflate(R.layout.fragment_list_, container, false)
     }
+
+     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+          super.onViewCreated(view, savedInstanceState)
+
+         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
+         initDataJson()
+         var adapter = CustomAdapter(modelSites, requireContext()) { site ->
+             detailSite(site)
+         }
+         recyclerView.layoutManager = LinearLayoutManager(requireContext())
+         recyclerView.adapter = adapter
+
+         val button = view.findViewById<ImageButton>(R.id.ib_config)
+         button.setOnClickListener {
+             Navigation.findNavController(view).navigate(R.id.action_list_Fragment2_to_preferenceFragment)
+         }
+      }
 
     private fun initDataJson() {
         val dataJson = readDataJson()
@@ -61,7 +75,7 @@ class MainActivity2 : AppCompatActivity() {
         var dataJson: String? = null
 
         try {
-            val dataRead = assets.open("mock_ciudades.json")
+            val dataRead = requireContext().assets.open("mock_ciudades.json")
             val size = dataRead.available()
             val dataCache = ByteArray(size)
             dataRead.read(dataCache)
@@ -73,8 +87,9 @@ class MainActivity2 : AppCompatActivity() {
         return dataJson
     }
 
-    fun detailSite(site: ModelSites?) {
-        val intent = Intent(this, MainActivity::class.java).apply {
+    private fun detailSite(site: ModelSites?) {
+
+        val intent = Intent(requireContext(), Detail_fragment::class.java).apply {
             putExtra("titulo", "${site?.titulo}")
             putExtra("descripcion", "${site?.descripcion}")
             putExtra("descripcion_corta", "${site?.descripcion_corta}")
@@ -86,5 +101,6 @@ class MainActivity2 : AppCompatActivity() {
         }
         startActivity(intent)
     }
+
 
 }
