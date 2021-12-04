@@ -27,22 +27,19 @@ class List_Fragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view= inflater.inflate(R.layout.fragment_list_, container, false)
-
-        val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
-        initDataJson()
-        var adapter = CustomAdapter(modelSites, requireContext()) { site ->
-            detailSite(site)
-        }
-        recyclerView.layoutManager = LinearLayoutManager(requireContext())
-        recyclerView.adapter = adapter
-
-
-        return view
+        return inflater.inflate(R.layout.fragment_list_, container, false)
     }
 
      override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
           super.onViewCreated(view, savedInstanceState)
+
+         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
+         initDataJson()
+         var adapter = CustomAdapter(modelSites, requireContext()) { site ->
+             detailSite(site)
+         }
+         recyclerView.layoutManager = LinearLayoutManager(requireContext())
+         recyclerView.adapter = adapter
 
          val button = view.findViewById<ImageButton>(R.id.ib_config)
          button.setOnClickListener {
