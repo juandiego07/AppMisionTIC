@@ -45,6 +45,7 @@ class List_Fragment : Fragment() {
          button.setOnClickListener {
              Navigation.findNavController(view).navigate(R.id.action_list_Fragment2_to_preferenceFragment)
          }
+
       }
 
     private fun initDataJson() {
