@@ -1,5 +1,6 @@
 package com.misiontic.touristicsites
 
+import android.widget.Button
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -33,7 +34,7 @@ class Detail_fragment : AppCompatActivity() {
 
             val button = findViewById<Button>(R.id.Geo)
             button.setOnClickListener {
-                launchMap(lat ="25.2537", long="55.3192")
+                launchMap("25.2537","55.3192")
 
             }
 
