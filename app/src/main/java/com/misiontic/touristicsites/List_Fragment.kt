@@ -62,7 +62,9 @@ class List_Fragment : Fragment() {
                     tiempo = dataSite.getString("tiempo"),
                     sitios = dataSite.getString("sitios"),
                     ruta_imagen = dataSite.getString("ruta_imagen"),
-                    score = dataSite.getString("score")
+                    score = dataSite.getString("score"),
+                    lat = dataSite.getString("lat"),
+                    long = dataSite.getString("long")
                 )
                 modelSites.add(site)
             }
@@ -99,6 +101,8 @@ class List_Fragment : Fragment() {
             putExtra("sitios", "${site?.sitios}")
             putExtra("ruta_imagen", "${site?.ruta_imagen}")
             putExtra("score", "${site?.score}")
+            putExtra("lat", "${site?.lat}")
+            putExtra("long", "${site?.long}")
         }
         startActivity(intent)
     }

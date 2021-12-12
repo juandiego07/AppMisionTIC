@@ -5,6 +5,7 @@ import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.*
 import com.bumptech.glide.Glide
 
@@ -31,24 +32,28 @@ class Detail_fragment : AppCompatActivity() {
 
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+        }
 
             val button = findViewById<Button>(R.id.Geo)
+            //Log.d("Valor", "Entree0")
             button.setOnClickListener {
-                launchMap("25.2537","55.3192")
+            //Log.d("Valor", "Entree1")
+            launchMap(objectSite.getStringExtra("lat").toString(), objectSite.getStringExtra("long").toString())
+
+
 
             }
 
         }
-    }
-
     private fun launchMap(lat: String, long: String) {
         val geo = "geo: $lat, $long"
         val gmmIntentUri = Uri.parse(geo)
         val mapIntent = Intent(Intent.ACTION_VIEW, gmmIntentUri)
         mapIntent.setPackage("com.google.android.apps.maps")
-        mapIntent.resolveActivity(packageManager)?.let {
-            startActivity(mapIntent)
-        }
+        startActivity(mapIntent)
     }
+
+
+
 
 }
