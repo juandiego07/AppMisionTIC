@@ -1,8 +1,10 @@
 package com.misiontic.touristicsites
 
 import android.content.Intent
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.Button
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import org.json.JSONArray
@@ -18,6 +20,14 @@ class MainActivity : AppCompatActivity() {
         this.supportActionBar?.hide()
         setContentView(R.layout.activity_main)
 
+
+
+    }
+
+    
+
+
+
         /*  val recyclerView = findViewById<RecyclerView>(R.id.recyclerView)
           initDataJson()
           var adapter = CustomAdapter(modelSites, this) { site ->
@@ -25,7 +35,7 @@ class MainActivity : AppCompatActivity() {
           }
           recyclerView.layoutManager = LinearLayoutManager(this)
           recyclerView.adapter = adapter*/
-    }
+
 
     /*
     private fun initDataJson() {
