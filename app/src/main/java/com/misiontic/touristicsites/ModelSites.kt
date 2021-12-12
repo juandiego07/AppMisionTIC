@@ -9,4 +9,6 @@ data class ModelSites(
     val sitios: String,
     val ruta_imagen: String,
     val score: String,
+    val lat: String,
+    val long: String
 )
