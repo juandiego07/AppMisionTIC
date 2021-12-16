@@ -1,10 +1,11 @@
-package com.misiontic.touristicsites
+package interfac
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import com.misiontic.touristicsites.R
 
 
 class FooterFragment : Fragment() {

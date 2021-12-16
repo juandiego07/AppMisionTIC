@@ -1,13 +1,14 @@
-package com.misiontic.touristicsites
+package interfac
 
 import android.widget.Button
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.*
 import com.bumptech.glide.Glide
+import com.misiontic.touristicsites.MainActivity
+import com.misiontic.touristicsites.R
 
 class Detail_fragment : AppCompatActivity() {
 

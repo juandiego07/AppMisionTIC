@@ -1,4 +1,4 @@
-package com.misiontic.touristicsites
+package adapter
 
 data class ModelSites(
     val titulo: String,

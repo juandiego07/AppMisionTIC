@@ -12,7 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.AppCompat.NoActionBar">
         <activity
-            android:name=".SplashActivity"
+            android:name="interfac.SplashActivity"
             android:theme="@style/SplashTheme"
             android:exported="true" >
             <intent-filter>
@@ -22,7 +22,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Detail_fragment"
+            android:name="interfac.Detail_fragment"
             android:exported="false" />
         <activity
             android:name=".MainActivity"

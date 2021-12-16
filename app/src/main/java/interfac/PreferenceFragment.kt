@@ -1,14 +1,13 @@
-package com.misiontic.touristicsites
+package interfac
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageButton
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.findNavController
+import com.misiontic.touristicsites.R
 
 class PreferenceFragment : Fragment() {
 
