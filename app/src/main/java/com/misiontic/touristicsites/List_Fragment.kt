@@ -6,21 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Button
 import android.widget.ImageButton
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
-import androidx.navigation.fragment.NavHostFragment.findNavController
-import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import org.json.JSONArray
-import org.json.JSONException
-import java.io.IOException
 
 class List_Fragment : Fragment() {
-
-   // private var modelSites = listOf<ModelSites>()
 
     private lateinit var listViewModel: ListViewModel
 
@@ -38,17 +30,14 @@ class List_Fragment : Fragment() {
         listViewModel = ViewModelProvider(this).get(ListViewModel::class.java)
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
-        //initDataJson()
 
         listViewModel.getSitesList().observe(viewLifecycleOwner, {
             var adapter = CustomAdapter(it, requireContext()) { site ->
-
                 detailSite(site)
             }
             recyclerView.layoutManager = LinearLayoutManager(requireContext())
             recyclerView.adapter = adapter
         })
-
 
         val button = view.findViewById<ImageButton>(R.id.ib_config)
         button.setOnClickListener {
@@ -74,49 +63,4 @@ class List_Fragment : Fragment() {
         }
         startActivity(intent)
     }
-
-
-    /*private fun initDataJson() {
-        val dataJson = readDataJson()
-        try {
-            val dataSites = JSONArray(dataJson)
-            for (i in 0 until dataSites.length()) {
-                val dataSite = dataSites.getJSONObject(i)
-                val site = ModelSites(
-                    titulo = dataSite.getString("titulo"),
-                    descripcion = dataSite.getString("descripcion"),
-                    descripcion_corta = dataSite.getString("descripcion_corta"),
-                    ubicacion = dataSite.getString("ubicacion"),
-                    tiempo = dataSite.getString("tiempo"),
-                    sitios = dataSite.getString("sitios"),
-                    ruta_imagen = dataSite.getString("ruta_imagen"),
-                    score = dataSite.getString("score"),
-                    lat = dataSite.getString("lat"),
-                    long = dataSite.getString("long")
-                )
-                modelSites.add(site)
-            }
-        } catch (e: JSONException) {
-            e.printStackTrace()
-        }
-    }
-
-    private fun readDataJson(): String? {
-
-        var dataJson: String? = null
-
-        try {
-            val dataRead = requireContext().assets.open("mock_ciudades.json")
-            val size = dataRead.available()
-            val dataCache = ByteArray(size)
-            dataRead.read(dataCache)
-            dataRead.close()
-            dataJson = String(dataCache)
-        } catch (e: IOException) {
-            e.printStackTrace()
-        }
-        return dataJson
-    }*/
-
-
 }

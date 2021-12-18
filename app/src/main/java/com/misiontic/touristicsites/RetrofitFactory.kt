@@ -19,5 +19,4 @@ object RetrofitFactory {
         .build()
 
     fun apiService(): ApiService = retrofit().create(ApiService::class.java)
-
 }
