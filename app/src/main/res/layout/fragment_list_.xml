@@ -74,7 +74,7 @@
 
         <fragment
             android:id="@+id/f_footer"
-            android:name="com.misiontic.touristicsites.FooterFragment"
+            android:name="com.misiontic.touristicsites.presentation.FooterFragment"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             app:layout_constraintBottom_toBottomOf="parent"
