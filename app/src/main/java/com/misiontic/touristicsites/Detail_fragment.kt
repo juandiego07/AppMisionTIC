@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import com.bumptech.glide.Glide
+import com.misiontic.touristicsites.presentation.MainActivity
 
 class Detail_fragment : AppCompatActivity() {
 

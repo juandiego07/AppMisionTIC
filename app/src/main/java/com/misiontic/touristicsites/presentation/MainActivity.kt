@@ -1,7 +1,8 @@
-package com.misiontic.touristicsites
+package com.misiontic.touristicsites.presentation
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import com.misiontic.touristicsites.R
 
 class MainActivity : AppCompatActivity() {
 
