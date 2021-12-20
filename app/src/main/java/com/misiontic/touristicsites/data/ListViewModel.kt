@@ -1,9 +1,10 @@
-package com.misiontic.touristicsites
+package com.misiontic.touristicsites.data
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.misiontic.touristicsites.network.RetrofitFactory
 import kotlinx.coroutines.launch
 
 class ListViewModel: ViewModel() {

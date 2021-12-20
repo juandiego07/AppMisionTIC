@@ -1,4 +1,4 @@
-package com.misiontic.touristicsites
+package com.misiontic.touristicsites.network
 
 import com.google.gson.Gson
 import com.google.gson.GsonBuilder

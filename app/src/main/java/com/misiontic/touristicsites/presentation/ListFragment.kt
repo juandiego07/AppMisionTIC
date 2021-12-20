@@ -1,4 +1,4 @@
-package com.misiontic.touristicsites
+package com.misiontic.touristicsites.presentation
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,8 +11,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.misiontic.touristicsites.*
+import com.misiontic.touristicsites.data.CustomAdapter
+import com.misiontic.touristicsites.data.ListViewModel
+import com.misiontic.touristicsites.data.ModelSites
 
-class List_Fragment : Fragment() {
+class ListFragment : Fragment() {
 
     private lateinit var listViewModel: ListViewModel
 
@@ -27,12 +31,12 @@ class List_Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        listViewModel = ViewModelProvider(this).get(ListViewModel::class.java)
+        listViewModel = ViewModelProvider(this)[ListViewModel::class.java]
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
 
         listViewModel.getSitesList().observe(viewLifecycleOwner, {
-            var adapter = CustomAdapter(it, requireContext()) { site ->
+            val adapter = CustomAdapter(it, requireContext()) { site ->
                 detailSite(site)
             }
             recyclerView.layoutManager = LinearLayoutManager(requireContext())
@@ -49,7 +53,7 @@ class List_Fragment : Fragment() {
 
     private fun detailSite(site: ModelSites?) {
 
-        val intent = Intent(requireContext(), Detail_fragment::class.java).apply {
+        val intent = Intent(requireContext(), DetailActivity::class.java).apply {
             putExtra("titulo", "${site?.titulo}")
             putExtra("descripcion", "${site?.descripcion}")
             putExtra("descripcion_corta", "${site?.descripcion_corta}")

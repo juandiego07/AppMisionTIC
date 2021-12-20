@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:background="@color/black"
     android:orientation="vertical"
-    tools:context=".Detail_fragment">
+    tools:context=".presentation.DetailActivity">
 
 
     <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
@@ -200,7 +200,7 @@
 
     <fragment
         android:id="@+id/f_footer"
-        android:name="com.misiontic.touristicsites.FooterFragment"
+        android:name="com.misiontic.touristicsites.presentation.FooterFragment"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"

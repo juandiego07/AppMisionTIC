@@ -1,4 +1,4 @@
-package com.misiontic.touristicsites
+package com.misiontic.touristicsites.presentation
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageButton
 import androidx.navigation.Navigation
+import com.misiontic.touristicsites.R
 
 class PreferenceFragment : Fragment() {
 
@@ -15,8 +16,7 @@ class PreferenceFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        val view = inflater.inflate(R.layout.fragment_preference, container, false)
-        return view
+        return inflater.inflate(R.layout.fragment_preference, container, false)
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
