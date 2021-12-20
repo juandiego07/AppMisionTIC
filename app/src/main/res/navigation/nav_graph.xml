@@ -6,7 +6,7 @@
     app:startDestination="@id/list_Fragment2">
     <fragment
         android:id="@+id/list_Fragment2"
-        android:name="com.misiontic.touristicsites.List_Fragment"
+        android:name="com.misiontic.touristicsites.ListFragment"
         android:label="fragment_list_"
         tools:layout="@layout/fragment_list_" >
         <action

@@ -12,7 +12,7 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 
-class List_Fragment : Fragment() {
+class ListFragment : Fragment() {
 
     private lateinit var listViewModel: ListViewModel
 
@@ -27,12 +27,12 @@ class List_Fragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        listViewModel = ViewModelProvider(this).get(ListViewModel::class.java)
+        listViewModel = ViewModelProvider(this)[ListViewModel::class.java]
 
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
 
         listViewModel.getSitesList().observe(viewLifecycleOwner, {
-            var adapter = CustomAdapter(it, requireContext()) { site ->
+            val adapter = CustomAdapter(it, requireContext()) { site ->
                 detailSite(site)
             }
             recyclerView.layoutManager = LinearLayoutManager(requireContext())
