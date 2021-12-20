@@ -1,7 +1,7 @@
-package com.misiontic.touristicsites
+package com.misiontic.touristicsites.network
 
+import com.misiontic.touristicsites.data.ModelSites
 import retrofit2.http.GET
-import retrofit2.http.Path
 
 interface ApiService {
     @GET("sites")

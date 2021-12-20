@@ -1,23 +1,23 @@
-package com.misiontic.touristicsites
+package com.misiontic.touristicsites.data
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
+import com.misiontic.touristicsites.R
 
 class CustomAdapter(val sites: List<ModelSites>, val context: Context, val click: (ModelSites?) -> Unit) :
     RecyclerView.Adapter<CustomAdapter.SitesHolder>() {
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CustomAdapter.SitesHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): SitesHolder {
         val layoutInflater = LayoutInflater.from(parent.context)
         return SitesHolder(layoutInflater.inflate(R.layout.card_layout, parent, false), context)
     }
 
-    override fun onBindViewHolder(holder: CustomAdapter.SitesHolder, position: Int) {
+    override fun onBindViewHolder(holder: SitesHolder, position: Int) {
         holder.render(sites[position])
     }
 

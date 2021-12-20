@@ -1,4 +1,4 @@
-package com.misiontic.touristicsites
+package com.misiontic.touristicsites.presentation
 
 import android.widget.Button
 import android.content.Intent
@@ -7,16 +7,16 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.*
 import com.bumptech.glide.Glide
-import com.misiontic.touristicsites.presentation.MainActivity
+import com.misiontic.touristicsites.R
 
-class Detail_fragment : AppCompatActivity() {
+class DetailActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.detail_fragment)
         val objectSite: Intent = intent
         Glide.with(this).load(objectSite.getStringExtra("ruta_imagen"))
-            .into(findViewById<ImageView>(R.id.iv_dubai_1))
+            .into(findViewById(R.id.iv_dubai_1))
         findViewById<TextView>(R.id.tvDubai).text = objectSite.getStringExtra("titulo")
         findViewById<TextView>(R.id.tv_detalle).text = objectSite.getStringExtra("descripcion")
         findViewById<TextView>(R.id.tv_detalle2).text = objectSite.getStringExtra("ubicacion")
@@ -36,7 +36,6 @@ class Detail_fragment : AppCompatActivity() {
                 objectSite.getStringExtra("long").toString()
             )
         }
-
     }
 
     private fun launchMap(lat: String, long: String) {
@@ -46,6 +45,4 @@ class Detail_fragment : AppCompatActivity() {
         mapIntent.setPackage("com.google.android.apps.maps")
         startActivity(mapIntent)
     }
-
-
 }

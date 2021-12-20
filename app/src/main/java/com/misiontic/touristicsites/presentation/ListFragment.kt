@@ -12,6 +12,9 @@ import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.misiontic.touristicsites.*
+import com.misiontic.touristicsites.data.CustomAdapter
+import com.misiontic.touristicsites.data.ListViewModel
+import com.misiontic.touristicsites.data.ModelSites
 
 class ListFragment : Fragment() {
 
@@ -50,7 +53,7 @@ class ListFragment : Fragment() {
 
     private fun detailSite(site: ModelSites?) {
 
-        val intent = Intent(requireContext(), Detail_fragment::class.java).apply {
+        val intent = Intent(requireContext(), DetailActivity::class.java).apply {
             putExtra("titulo", "${site?.titulo}")
             putExtra("descripcion", "${site?.descripcion}")
             putExtra("descripcion_corta", "${site?.descripcion_corta}")
