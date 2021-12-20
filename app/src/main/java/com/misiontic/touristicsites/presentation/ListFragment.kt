@@ -1,4 +1,4 @@
-package com.misiontic.touristicsites
+package com.misiontic.touristicsites.presentation
 
 import android.content.Intent
 import android.os.Bundle
@@ -11,6 +11,7 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.misiontic.touristicsites.*
 
 class ListFragment : Fragment() {
 
