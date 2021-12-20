@@ -15,7 +15,7 @@
     </fragment>
     <fragment
         android:id="@+id/preferenceFragment"
-        android:name="com.misiontic.touristicsites.PreferenceFragment"
+        android:name="com.misiontic.touristicsites.presentation.PreferenceFragment"
         android:label="fragment_preference"
         tools:layout="@layout/fragment_preference" >
         <action
